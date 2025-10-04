@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meftahi Agro Distribution</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#2c7a7b; /* teal */
+      --accent:#38a169; /* green */
+      --muted:#f4f6f8;
+      --card-bg: #ffffff;
+      --text:#222;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Roboto',sans-serif;background:var(--muted);color:var(--text);}
+    header{background:linear-gradient(90deg,var(--primary),#1f6b6b);color:white;padding:28px 18px}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    .brand{display:flex;align-items:center;gap:16px;justify-content:center}
+    .logo{width:64px;height:64px;border-radius:12px;background:white;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--primary)}
+    h1{margin:0;font-size:22px}
+    .slogan{opacity:.95;margin-top:6px}
+    nav.lang{margin-top:12px;text-align:center}
+    nav.lang button{margin:0 6px;padding:8px 12px;border-radius:8px;border:none;cursor:pointer;background:transparent;color:white;font-weight:600}
+
+    main{padding:28px 12px}
+    .hero{background:linear-gradient(0deg, rgba(44,122,123,0.06), rgba(44,122,123,0.02));border-radius:12px;padding:18px;display:flex;gap:18px;align-items:center}
+    .hero img{width:220px;height:140px;object-fit:cover;border-radius:10px}
+    .hero .txt{flex:1;text-align:center}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+
+    /* sections */
+    section{margin-top:22px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:var(--card-bg);padding:14px;border-radius:12px;box-shadow:0 4px 14px rgba(16,24,40,0.06);text-align:center}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .small{font-size:14px;color:#555}
+
+    /* team */
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px}
+    .member{background:var(--card-bg);padding:12px;border-radius:12px;text-align:center}
+    .member img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+
+    /* partners */
+    .partners{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center}
+    .partner{background:white;padding:10px;border-radius:8px;min-width:120px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,0.05)}
+
+    /* contact */
+    .contact{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .contact .info{flex:1}
+
+    footer{margin-top:32px;padding:18px;text-align:center;color:#fff;background:linear-gradient(90deg,var(--primary),#1f6b6b);}
+
+    /* whatsapp */
+    .whatsapp{position:fixed;left:18px;bottom:18px;background:#25D366;border-radius:999px;padding:12px 14px;color:white;text-decoration:none;font-weight:700;box-shadow:0 6px 18px rgba(37,211,102,0.18)}
+
+    /* responsive */
+    @media(min-width:900px){.hero{text-align:left}.hero .txt{text-align:left}}
+
+  </style>
+</head>
+<body dir="rtl">
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo">MA</div>
+        <div>
+          <h1 id="brand-title">Meftahi Agro Distribution</h1>
+          <div class="slogan" id="slogan">توزيع المواد الغذائية ومواد التنظيف</div>
+        </div>
+      </div>
+      <nav class="lang">
+        <button onclick="setLang('ar')">العربية</button>
+        <button onclick="setLang('fr')">Français</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=800&q=60" alt="distribution">
+      <div class="txt">
+        <h2 id="hero-title">شركة توزيع موثوقة</h2>
+        <p id="hero-sub">نوفر أفضل المنتجات بأسرع وقت مع شبكة توزيع قوية عبر الجزائر.</p>
+        <div style="margin-top:12px">
+          <a class="btn" href="#products" id="cta-btn">منتجاتنا</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" aria-label="about">
+      <h3 id="about-title">من نحن</h3>
+      <p id="about-text" class="small">شركة عائلية جزائرية متخصصة في توزيع المواد الغذائية ومنظفات المنازل. نسعى لتقديم جودة وخدمة ممتازة لعملائنا.</p>
+    </section>
+
+    <section id="services">
+      <h3 id="services-title">خدماتنا</h3>
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1542293787938-c9e299b8801c?auto=format&fit=crop&w=800&q=60" alt="stock">
+          <h4 id="s1">تخزين وتشغيل</h4>
+          <p class="small" id="s1-text">مخازن مجهزة ومراقبة لتأمين سلسلة التوريد.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1515524738708-327f6b0037a6?auto=format&fit=crop&w=800&q=60" alt="logistics">
+          <h4 id="s2">توزيع و نقل</h4>
+          <p class="small" id="s2-text">شبكة توزيع وطنية بسرعة وكفاءة.</p>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=800&q=60" alt="quality">
+          <h4 id="s3">جودة المنتجات</h4>
+          <p class="small" id="s3-text">منتجات من ماركات موثوقة وخيارات متعددة.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <h3 id="products-title">منتجاتنا</h3>
+      <div class="cards" id="products-grid">
+        <!-- products inserted by JS -->
+      </div>
+    </section>
+
+    <section id="team">
+      <h3 id="team-title">فريقنا</h3>
+      <div class="team-grid" id="team-grid">
+        <!-- team inserted by JS -->
+      </div>
+    </section>
+
+    <section id="partners">
+      <h3 id="partners-title">شركاؤنا</h3>
+      <div class="partners" id="partners-list">
+        <!-- partners inserted by JS -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3 id="contact-title">تواصل معنا</h3>
+      <div class="contact">
+        <div class="info">
+          <p id="contact-text">الهاتف: <strong id="phone">0555 55 55 55</strong> | البريد: <strong id="email">info@meftahi-agro.com</strong></p>
+          <p class="small">العنوان: الكاليتوس - الجزائر</p>
+        </div>
+        <div>
+          <a id="wh-link" class="btn" href="#">واتساب</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a class="whatsapp" id="wh-floating" href="#" target="_blank">واتساب</a>
+
+  <footer>
+    <div class="wrap">
+      <div id="footer-text">© 2025 Meftahi Agro Distribution - كل الحقوق محفوظة</div>
+    </div>
+  </footer>
+
+  <script>
+    const data = {
+      phoneRaw: '0555555555', // ضع رقم الواتساب الحقيقي هنا بدون مسافات
+      phoneDisplay: '0555 55 55 55',
+      products: [
+        {title_ar:'دقيق القمح',title_fr:'Farine de blé',img:'https://images.unsplash.com/photo-1586201375761-83865001eabb?auto=format&fit=crop&w=800&q=60',price:'350 DA'},
+        {title_ar:'منظف متعدد الأغراض',title_fr:'Nettoyant multi-usages',img:'https://images.unsplash.com/photo-1582719478176-8f0b1a3f0b2b?auto=format&fit=crop&w=800&q=60',price:'420 DA'},
+        {title_ar:'أرز أبيض',title_fr:'Riz blanc',img:'https://images.unsplash.com/photo-1604908177522-42dd5d8b7a28?auto=format&fit=crop&w=800&q=60',price:'450 DA'},
+        {title_ar:'سكر بلدي',title_fr:'Sucre',img:'https://images.unsplash.com/photo-1567939135933-5f9b1f6f2f8f?auto=format&fit=crop&w=800&q=60',price:'300 DA'}
+      ],
+      team:[
+        {name:'أحمد مفتاح',role_ar:'المدير العام',role_fr:'Directeur Général',img:'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=60'},
+        {name:'ليلى مفتاح',role_ar:'التسويق',role_fr:'Marketing',img:'https://images.unsplash.com/photo-1545996124-1b2f6e5f6e2d?auto=format&fit=crop&w=600&q=60'},
+        {name:'سعيد بوضياف',role_ar:'اللوجستيك',role_fr:'Logistique',img:'https://images.unsplash.com/photo-1548472084-1b2a6d9d8f6b?auto=format&fit=crop&w=600&q=60'}
+      ],
+      partners:[
+        {name:'سوبرماركت X'},
+        {name:'مؤسسة Y'},
+        {name:'تاجر Z'}
+      ]
+    }
+
+    // render products
+    const productsGrid = document.getElementById('products-grid');
+    data.products.forEach(p => {
+      const div = document.createElement('div'); div.className='card';
+      div.innerHTML = `<img src="${p.img}" alt="${p.title_ar}"><h4 class='prod-title'>${p.title_ar}</h4><p class='small'>${p.price}</p>`;
+      productsGrid.appendChild(div);
+    })
+
+    // render team
+    const teamGrid = document.getElementById('team-grid');
+    data.team.forEach(m=>{
+      const el=document.createElement('div');el.className='member';
+      el.innerHTML=`<img src='${m.img}' alt='${m.name}'><h4>${m.name}</h4><p class='small'>${m.role_ar}</p>`;
+      teamGrid.appendChild(el);
+    })
+
+    // partners
+    const partnersList = document.getElementById('partners-list');
+    data.partners.forEach(p=>{
+      const el=document.createElement('div');el.className='partner';el.innerHTML=`<strong>${p.name}</strong>`;partnersList.appendChild(el);
+    })
+
+    // WhatsApp links
+    const waUrl = (num, text)=>`https://wa.me/${num}?text=${encodeURIComponent(text)}`;
+    document.getElementById('wh-link').setAttribute('href', waUrl(data.phoneRaw, 'مرحبا، أريد معلومات حول المنتجات'));
+    document.getElementById('wh-floating').setAttribute('href', waUrl(data.phoneRaw, 'مرحبا، أريد معلومات حول المنتجات'));
+
+    // language switcher (AR/FR)
+    const translations = {
+      ar: {
+        brand:'Meftahi Agro Distribution',
+        slogan:'توزيع المواد الغذائية ومواد التنظيف',
+        heroTitle:'شركة توزيع موثوقة',
+        heroSub:'نوفر أفضل المنتجات بأسرع وقت مع شبكة توزيع قوية عبر الجزائر.',
+        aboutTitle:'من نحن',
+        aboutText:'شركة عائلية جزائرية متخصصة في توزيع المواد الغذائية ومنظفات المنازل. نسعى لتقديم جودة وخدمة ممتازة لعملائنا.',
+        servicesTitle:'خدماتنا',
+        productsTitle:'منتجاتنا',
+        teamTitle:'فريقنا',
+        partnersTitle:'شركاؤنا',
+        contactTitle:'تواصل معنا',
+        contactText:`الهاتف: <strong>${data.phoneDisplay}</strong> | البريد: <strong>info@meftahi-agro.com</strong>`,
+        cta:'منتجاتنا',
+        footer:'© 2025 Meftahi Agro Distribution - كل الحقوق محفوظة'
+      },
+      fr: {
+        brand:'Meftahi Agro Distribution',
+        slogan:'Distribution de produits alimentaires et de nettoyage',
+        heroTitle:'Entreprise de distribution fiable',
+        heroSub:'Nous offrons les meilleurs produits rapidement avec un réseau de distribution fort à travers l’Algérie.',
+        aboutTitle:'Qui sommes-nous',
+        aboutText:'Entreprise familiale algérienne spécialisée dans la distribution de produits alimentaires et de nettoyage.',
+        servicesTitle:'Nos services',
+        productsTitle:'Nos produits',
+        teamTitle:'Notre équipe',
+        partnersTitle:'Nos partenaires',
+        contactTitle:'Contactez-nous',
+        contactText:`Tél: <strong>${data.phoneDisplay}</strong> | Email: <strong>info@meftahi-agro.com</strong>`,
+        cta:'Nos produits',
+        footer:'© 2025 Meftahi Agro Distribution - Tous droits réservés'
+      }
+    }
+
+    function setLang(lang){
+      const t = translations[lang];
+      document.getElementById('brand-title').innerText = t.brand;
+      document.getElementById('slogan').innerText = t.slogan;
+      document.getElementById('hero-title').innerText = t.heroTitle;
+      document.getElementById('hero-sub').innerText = t.heroSub;
+      document.getElementById('about-title').innerText = t.aboutTitle;
+      document.getElementById('about-text').innerHTML = t.aboutText;
+      document.getElementById('services-title').innerText = t.servicesTitle;
+      document.getElementById('products-title').innerText = t.productsTitle;
+      document.getElementById('team-title').innerText = t.teamTitle;
+      document.getElementById('partners-title').innerText = t.partnersTitle;
+      document.getElementById('contact-title').innerText = t.contactTitle;
+      document.getElementById('contact-text').innerHTML = t.contactText;
+      document.getElementById('cta-btn').innerText = t.cta;
+      document.getElementById('footer-text').innerText = t.footer;
+
+      if(lang==='fr'){
+        document.documentElement.setAttribute('lang','fr');
+        document.body.setAttribute('dir','ltr');
+        document.querySelectorAll('h1,h2,h3,h4,h4').forEach(e=>e.style.textAlign='left');
+      } else {
+        document.documentElement.setAttribute('lang','ar');
+        document.body.setAttribute('dir','rtl');
+        document.querySelectorAll('h1,h2,h3,h4,h4').forEach(e=>e.style.textAlign='right');
+      }
+    }
+
+    // default Arabic
+    setLang('ar');
+  </script>
+</body>
+</html>
